@@ -33,6 +33,8 @@ class PacientesController extends Controller
     $paciente->num_tel=$request->telefono;
     $paciente->save();
 
-    index();
+    $pacientes=paciente::select('nombres','apaterno','amaterno','calle','colonia','ocupacion','edad')->get();
+    $cont=1;
+    return view('pacientes',compact(['pacientes','cont']));
   }
 }

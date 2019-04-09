@@ -24,7 +24,7 @@
           <form action="{{route('login')}}" method="post">
             {{ csrf_field() }}
             <input type="text" id="login" class="fadeIn second" name="username" placeholder="Usuario">
-            <input type="text" id="password" class="fadeIn third" name="password" placeholder="Contraseña">
+            <input id="password" type="password" class="fadeIn third" name="password" placeholder="Contraseña">
             <input type="submit" id="iniciarSesion" class="fadeIn fourth" value="Iniciar sesión">
           </form>
         </div>

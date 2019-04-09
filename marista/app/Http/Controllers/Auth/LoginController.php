@@ -107,12 +107,12 @@ class LoginController extends Controller
     protected function sendLoginResponse(Request $request)
     {
         $request->session()->regenerate();
-        $datos=usuario::select('nombres','apaterno','amaterno','rol')
+        $datos=usuario::select('nombres','apaterno','amaterno','rol','id_usuario')
             ->where('id_usuario',auth()->user()->id_usuario)->first();
         $nombre =$datos->nombres." ".$datos->apaterno." ".$datos->amaterno;
         //$request->session()->put('id_admin', $request->id_admin);
         $rol=$datos->rol;
-        session(['id_usuario'=>$request->id_admin,'nombre'=>$nombre,'rol'=>$rol]);
+        session(['id_usuario'=>$datos->id_usuario,'nombre'=>$nombre,'rol'=>$rol]);
         return $this->authenticated($request, $this->guard()->user())
                 ?: redirect()->intended(route('inicio'));
     }

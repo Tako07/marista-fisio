@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Route::post('/login', 'Auth\LoginController@login')->name('login');
 
+Route::get('/cerrar_sesion','Auth\LoginController@logout')->name('logout');
+
 Route::get('/inicio', function () {
     return view('inicio');
 })->name('inicio');
@@ -43,9 +45,9 @@ Route::get('/registroServidorSocial',function(){
   return view('registroServidorSocial');
 });
 
-Route::get('/registroMedico',function(){
-  return view('registroMedico');
-});
+Route::get('/registroMedico','MedicoController@showRegistro')->name('registroMedico');
+
+Route::post('/registroMedico','MedicoController@registro')->name('insertarMedico');
 
 Route::get('/registroPasante',function(){
   return view('registroPasante');

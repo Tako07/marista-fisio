@@ -22,23 +22,23 @@
     						<ul class="simple">
     							<li>
     								<small class="text-muted">Nombre:</small>
-    								<span>Julian Roberto</span>
+    								<span>{{$usr->nombres}}</span>
     							</li>
     							<li>
     								<small class="text-muted">Apellido paterno:</small>
-    								<span>Jimenez</span>
+    								<span>{{$usr->apaterno}}</span>
     							</li>
     							<li>
     								<small class="text-muted">Apellido materno:</small>
-    								<span>Garcia</span>
+    								<span>{{$usr->amaterno}}</span>
     							</li>
     							<li>
     								<small class="text-muted">Ocupación:</small>
-    								<span>Pasante</span>
+    								<span>{{$usr->rol}}</span>
     							</li>
     							<li>
     								<small class="text-muted">Fecha de nacimiento:</small>
-    								<span>13 de Febrero de 1996</span>
+    								<span>{{$usr->fecha_nacimiento}}</span>
     							</li>
     							</li>
     						</ul>
@@ -57,43 +57,33 @@
     				<ul class="simple">
     					<li>
     						<small class="text-muted">Calle y número:</small>
-    						<span>Francisco Lazo Estrada #32</span>
+    						<span>{{$usr->calle}}</span>
     					</li>
     					<li>
     						<small class="text-muted">Colonia:</small>
-    						<span>Fracc Villas Del Real</span>
+    						<span>{{$usr->colonia}}</span>
     					</li>
     					<li>
     						<small class="text-muted">Código postal:</small>
-    						<span>58116</span>
-    					</li>
-    					<li>
-    						<small class="text-muted">Municipio:</small>
-    						<span>Moreia</span>
-    					</li>
-    					<li>
-    						<small class="text-muted">Estado:</small>
-    						<span>Michoacán</span>
+    						<span>{{$usr->cp}}</span>
     					</li>
     					<li>
     						<small class="text-muted">Teléfono celular:</small>
-    						<span>4432445888</span>
+    						<span>{{$usr->num_cel}}</span>
     					</li>
               <li>
                 <small class="text-muted">Teléfono de casa:</small>
-                <span>4432445888</span>
+                <span>{{$usr->num_tel}}</span>
               </li>
     					<li>
     						<small class="text-muted">Correo electrónico:</small>
-    						<span>jualin96@hotmail.com</span>
+    						<span>{{$usr->email}}</span>
     					</li>
     				</ul>
     			</div>
     		</div>
     	</div>
     </div>
-@else
-soy admin alv
 @endif
 </div>
 @endsection

@@ -36,7 +36,7 @@
       <th scope="col">Apellidos</th>
       <th scope="col">Domicilio</th>
       <th scope="col">Ocupacion</th>
-      <th scope="col">Fecha de Nacimiento</th>
+      <th scope="col">Edad</th>
       <th scope="col"></th>
     </tr>
   </thead>

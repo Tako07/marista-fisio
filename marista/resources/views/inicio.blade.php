@@ -57,9 +57,11 @@
         </a>
       </div>
       <div id="cerrar_sesion" class="col-md contImg">
+        <a href="{{route('logout')}}">
         <div class="transparencia">
           <div class="textoImg">Cerrar Sesión</div>
         </div>
+        </a>
       </div>
     </div>
   </div>

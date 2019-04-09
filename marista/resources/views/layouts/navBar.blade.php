@@ -24,7 +24,7 @@
 
       <div id="logo" class="row">
         <div class="col s6">
-          <img id="img_logo" class="resposive-img" src="../img/logo/logo_horizontal_blanco.png">
+          <a  href="{{route('inicio')}}"><img id="img_logo" class="resposive-img" src="../img/logo/logo_horizontal_blanco.png"></a>
         </div>
       </div>
 
@@ -35,9 +35,9 @@
     <li><a href="{{route('showDatosPersonales')}}">Datos Personales</a></li>
     <li><a href="{{route('showPacientes')}}">Pacientes</a></li>
     <li><a href="{{route('showHistoriaClinica')}}">Historia Clinica</a></li>
-    <li><a href="#">Consultas</a></li>
-    <li><a href="#">Citas</a></li>
-    <li><a href="#">Cerrar sesión</a></li>
+    <li><a href="{{route('showConsuta')}}">Consultas</a></li>
+    <li><a href="{{route('showCalendario')}}">Citas</a></li>
+    <li><a href="{{route('logout')}}">Cerrar sesión</a></li>
   </ul>
 @yield('principal')
 @section ('scripts')
