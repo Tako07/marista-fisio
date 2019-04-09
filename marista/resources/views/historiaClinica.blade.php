@@ -32,48 +32,31 @@
     </tr>
   </thead>
   <tbody>
+    @foreach($pacientes as $paciente)
+    @if($aux==1)
     <tr class="grayMarista">
-      <th scope="row">Pepito</th>
-      <td>Martinez Robles</td>
-      <td>PMRS129327HMNKMR01</td>
-      <th class="cita" scope="col">12/01/2020</th>
-      <td><a href="historiaClinica/clinica">Ver historial</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Pepito</th>
-      <td>Martinez Robles</td>
-      <td>PMRS129327HMNKMR01</td>
+      <th scope="row">{{$paciente->nombres}}</th>
+      <td>{{$paciente->apaterno}} {{$paciente->amaterno}}</td>
+      <td>{{$paciente->curp}}</td>
       <th class="cita" scope="col">12/01/2020</th>
       <td><a href="#">Ver historial</a></td>
     </tr>
-    <tr class="grayMarista">
-      <th scope="row">Pepito</th>
-      <td>Martinez Robles</td>
-      <td>PMRS129327HMNKMR01</td>
+      @php
+      $aux=2
+      @endphp
+    @else
+    <tr class="yellowMarista">
+      <th scope="row">{{$paciente->nombres}}</th>
+      <td>{{$paciente->apaterno}} {{$paciente->amaterno}}</td>
+      <td>{{$paciente->curp}}</td>
       <th class="cita" scope="col">12/01/2020</th>
       <td><a href="#">Ver historial</a></td>
     </tr>
-    <tr>
-      <th scope="row">Pepito</th>
-      <td>Martinez Robles</td>
-      <td>PMRS129327HMNKMR01</td>
-      <th class="cita" scope="col">12/01/2020</th>
-      <td><a href="#">Ver historial</a></td>
-    </tr>
-    <tr class="grayMarista">
-      <th scope="row">Pepito</th>
-      <td>Martinez Robles</td>
-      <td>PMRS129327HMNKMR01</td>
-      <th class="cita" scope="col">12/01/2020</th>
-      <td><a href="#">Ver historial</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Pepito</th>
-      <td>Martinez Robles</td>
-      <td>PMRS129327HMNKMR01</td>
-      <th class="cita" scope="col">12/01/2020</th>
-      <td><a href="#">Ver historial</a></td>
-    </tr>
+      @php
+        $aux=1
+      @endphp
+    @endif
+    @endforeach
   </tbody>
 </table>
 
